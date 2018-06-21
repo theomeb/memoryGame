@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 import './App.css'
 
 import Card from './Card'
@@ -9,7 +8,7 @@ import HallOfFame, { FAKE_HOF } from './HallOfFame'
 import HighScoreInput from './HighScoreInput'
 import {generateCards} from './Services/cardsManager'
 
-const VISUAL_PAUSE_MSECS = 750
+const VISUAL_PAUSE_MSECS = 750;
 
 class App extends Component {
   state = {
@@ -75,7 +74,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(generateCards)
+
     const { cards, guesses, hallOfFame, matchedCardIndices } = this.state
     //const won = matchedCardIndices.length === cards.length
     // TEMPORAIRE
