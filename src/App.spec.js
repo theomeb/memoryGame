@@ -33,8 +33,12 @@ describe('<App />', () => {
 
       cardsManager.generateCards = jest.fn(() => mockSymbols);
       
-      const wrapper = shallow(<App />);
-      expect(wrapper).to.matchSnapshot();
+      try {
+        const wrapper = shallow(<App />);
+        expect(wrapper).to.matchSnapshot();
+      } finally {
+        jest.resetAllMocks();
+      }
     })
 
   describe('<Card/>', () => {
