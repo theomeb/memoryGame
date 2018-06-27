@@ -5,8 +5,10 @@ import './Game.css'
 import Card from './Card'
 import GuessCount from './GuessCount'
 import HallOfFame, { FAKE_HOF } from './HallOfFame'
+import VisibleHallOfFame from '../containers/VisibleHallOfFame'
 import HighScoreInput from './HighScoreInput'
-import {generateCards} from './Services/cardsManager'
+import {generateCards} from '../services/cardsManager'
+import AddPlayer from '../containers/AddPlayer' ;
 
 const VISUAL_PAUSE_MSECS = 750;
 
@@ -97,12 +99,11 @@ class Game extends Component {
             />
           ))
         }
-        {won &&
-            (hallOfFame ? (
-              <HallOfFame entries={hallOfFame} />
-            ) : (
-              <HighScoreInput guesses={guesses} onStored={this.displayHallOfFame} />
-            ))
+        {true && //true temporaire (won)
+            <div>
+              <VisibleHallOfFame />
+              <AddPlayer/>
+            </div>
         }
         <button type="button" className="reset" onClick={this.resetCards}>Reset the game</button>
       </div>
