@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './App.css'
+import './Game.css'
 
 import Card from './Card'
 import GuessCount from './GuessCount'
@@ -10,7 +10,7 @@ import {generateCards} from './Services/cardsManager'
 
 const VISUAL_PAUSE_MSECS = 750;
 
-class App extends Component {
+class Game extends Component {
   state = {
     cards: generateCards(),
     currentPair: [],
@@ -73,6 +73,10 @@ class App extends Component {
     this.setState({ hallOfFame })
   }
 
+  resetCards = () => {
+    this.setState({cards: generateCards(), currentPair: [], guesses: 0, hallOfFame: null, matchedCardIndices: [] })
+  }
+
   render() {
 
     const { cards, guesses, hallOfFame, matchedCardIndices } = this.state
@@ -100,9 +104,10 @@ class App extends Component {
               <HighScoreInput guesses={guesses} onStored={this.displayHallOfFame} />
             ))
         }
+        <button type="button" className="reset" onClick={this.resetCards}>Reset the game</button>
       </div>
     )
   }
 }
 
-export default App
+export default Game

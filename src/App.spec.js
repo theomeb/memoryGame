@@ -24,8 +24,7 @@ describe('<App />', () => {
       const wrapper = shallow(<App />);
       expect(wrapper.find('Card')).to.have.length(36);
     })
-
-    jest.unmock('./Services/cardsManager');
+    
     const cardsManager = require.requireActual('./Services/cardsManager');
 
     it('should match its reference snapshot', () => {
@@ -52,9 +51,8 @@ describe('<App />', () => {
     })
 
     it('should match its reference snapshot', () => {
-        const onClick = sinon.spy();
         const wrapper = shallow(
-        <Card card="😁" feedback="hidden" index={0} onClick={onClick} />
+        <Card card="😁" feedback="hidden" index={0} onClick={()=>{}} />
         );
         expect(wrapper).to.matchSnapshot()
     })

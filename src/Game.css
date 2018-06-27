@@ -1,0 +1,29 @@
+.memory {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: auto;
+  user-select: none;
+  border-style: solid;
+  border-color: rgba(61, 193, 207, 0.651)
+}
+
+.reset {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 15px;
+  width: 40%;
+  border:none;
+	padding:6px 0 6px 0;
+	border-radius:2px;
+	box-shadow:2px 2px 6px #999;
+	background:#fff;
+	font:bold 13px Arial;
+	color:#555;
+}
+
+.reset:active {
+  background: rgb(155, 230, 241)
+}

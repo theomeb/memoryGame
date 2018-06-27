@@ -1,9 +1,0 @@
-.memory {
-  display: flex;
-  flex-wrap: wrap;
-  width: 300px;
-  margin: auto;
-  user-select: none;
-  border-style: solid;
-  border-color: rgba(61, 193, 207, 0.651)
-}
