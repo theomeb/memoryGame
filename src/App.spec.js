@@ -2,30 +2,32 @@ import { expect } from 'chai'
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import App from './App'
-import { SYMBOLS } from './Services/cardsManager'
-import GuessCount from './GuessCount'
-import Card from './Card'
+import { Game } from './containers/Game'
+import { SYMBOLS } from './services/cardsManager'
+import GuessCount from './components/GuessCount'
+import Card from './components/Card'
 import sinon from 'sinon'
 
 
 
-describe('<App />', () => {
+
+describe('<Game />', () => {
+
     it('renders without crashing', () => {
-      const wrapper = shallow(<App />)
+      const wrapper = shallow(<Game />)
     })
 
     it('contains a zero-guess counter', () => {
-      const wrapper = shallow(<App />);
+      const wrapper = shallow(<Game currentScore={0} />);
       expect(wrapper).to.contain(<GuessCount guesses={0} />);
     })
 
     it('has 36 cards', () => {
-      const wrapper = shallow(<App />);
+      const wrapper = shallow(<Game />);
       expect(wrapper.find('Card')).to.have.length(36);
     })
     
-    const cardsManager = require.requireActual('./Services/cardsManager');
+    const cardsManager = require.requireActual('./services/cardsManager');
 
     it('should match its reference snapshot', () => {
       const mockSymbols = [...SYMBOLS.repeat(2)];
@@ -33,7 +35,7 @@ describe('<App />', () => {
       cardsManager.generateCards = jest.fn(() => mockSymbols);
       
       try {
-        const wrapper = shallow(<App />);
+        const wrapper = shallow(<Game />);
         expect(wrapper).to.matchSnapshot();
       } finally {
         jest.resetAllMocks();

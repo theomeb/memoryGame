@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> <Card/> should match its reference snapshot 1`] = `
+exports[`<Game /> <Card/> should match its reference snapshot 1`] = `
 <div
   className="card hidden"
   onClick={[Function]}
@@ -13,7 +13,7 @@ exports[`<App /> <Card/> should match its reference snapshot 1`] = `
 </div>
 `;
 
-exports[`<App /> should match its reference snapshot 1`] = `
+exports[`<Game /> should match its reference snapshot 1`] = `
 <div
   className="memory"
 >
@@ -272,5 +272,16 @@ exports[`<App /> should match its reference snapshot 1`] = `
     key="35"
     onClick={[Function]}
   />
+  <div>
+    <Connect(HallOfFame) />
+    <Connect(AddPlayer) />
+  </div>
+  <button
+    className="reset"
+    onClick={[Function]}
+    type="button"
+  >
+    Reset the game
+  </button>
 </div>
 `;

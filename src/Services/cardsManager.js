@@ -1,7 +1,7 @@
 import shuffle from 'lodash.shuffle'
 
 const SIDE = 6
-export const SYMBOLS = '😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿'
+export const SYMBOLS = '🎉😀💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿'
 
 export const  generateCards = function() {
     const result = []

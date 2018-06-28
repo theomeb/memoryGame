@@ -1,8 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addPlayer } from '../Actions'
+import HighScoreInput from '../components/HighScoreInput'
 
-let AddPlayer = ({ dispatch }) => {
+
+let AddScore = ({ dispatch }) => {
   let input
 
   return (
@@ -12,7 +14,7 @@ let AddPlayer = ({ dispatch }) => {
         if (!input.value.trim()) {
           return
         }
-        dispatch(addPlayer(input.value))
+        dispatch(addPlayer(input.value, 10))
         input.value = ''
       }}>
         <input ref={node => {
@@ -25,6 +27,6 @@ let AddPlayer = ({ dispatch }) => {
     </div>
   )
 }
-AddPlayer = connect()(AddPlayer)
+AddScore = connect()(AddScore)
 
-export default AddPlayer
+export default AddScore
