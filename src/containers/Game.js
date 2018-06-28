@@ -94,7 +94,8 @@ export class Game extends Component {
   }
 
   resetCards = () => {
-    this.props.resetScore()
+    this.props.resetScore();
+    this.state.cards = generateCards()
   }
 
   render() {
@@ -103,8 +104,6 @@ export class Game extends Component {
     //const won = matchedCardIndices.length === cards.length
     // TEMPORAIRE
     const won = matchedCardIndices.length === 2 // cards.length
-
-    if (won) {console.log('oui')}
 
     return (
       <div className="memory">

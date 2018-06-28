@@ -11,7 +11,7 @@ export const RESET_CURRENT_SCORE = 'RESET_CURRENT_SCORE';
  */
 
 export function addPlayer(name, score) {
-    return { type: ADD_PLAYER, name, score}
+    return { type: ADD_PLAYER, name}
   }
 
 export function incrementCurrentScore() {

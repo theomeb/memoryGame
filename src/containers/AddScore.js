@@ -4,6 +4,7 @@ import { addPlayer } from '../Actions'
 
 
 
+
 let AddScore = ({ dispatch }) => {
   let input
 
@@ -14,7 +15,7 @@ let AddScore = ({ dispatch }) => {
         if (!input.value.trim()) {
           return
         }
-        dispatch(addPlayer(input.value, 10))
+        dispatch(addPlayer(input.value))
         input.value = ''
       }}>
         <input ref={node => {
@@ -27,6 +28,8 @@ let AddScore = ({ dispatch }) => {
     </div>
   )
 }
+
+
 AddScore = connect()(AddScore)
 
 export default AddScore

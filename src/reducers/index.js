@@ -12,7 +12,7 @@ const memoryApp = (state = initialState, action) => {
                 ...state.players,
                 {
                   name: action.name,
-                  score: action.score
+                  score: state.currentScore
                 }
             ]
         })
