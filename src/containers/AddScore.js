@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addPlayer } from '../Actions'
-import HighScoreInput from '../components/HighScoreInput'
+
 
 
 let AddScore = ({ dispatch }) => {
