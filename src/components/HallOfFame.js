@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import Player from './Player'
 
 const HallOfFame = ({ players }) => (
-  <ul>
-    {players.map((player, index) => (
-      <Player key={index} {...player} />
-    ))}
-  </ul>
+  // <ul>
+  //   {players.map((player, index) => (
+  //     <Player key={index} {...player} />
+  //   ))}
+  // </ul>
+  <div> YO </div>
 )
 
 

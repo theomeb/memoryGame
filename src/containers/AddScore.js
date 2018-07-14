@@ -4,7 +4,6 @@ import { addPlayer } from '../Actions'
 
 
 
-
 let AddScore = ({ dispatch }) => {
   let input
 
@@ -28,8 +27,6 @@ let AddScore = ({ dispatch }) => {
     </div>
   )
 }
-
-
 AddScore = connect()(AddScore)
 
 export default AddScore

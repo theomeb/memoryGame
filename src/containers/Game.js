@@ -118,7 +118,7 @@ export class Game extends Component {
             />
           ))
         }
-        {won && //true temporaire (won)
+        {true &&
             <div>
               <VisibleHallOfFame />
               <AddScore/>
