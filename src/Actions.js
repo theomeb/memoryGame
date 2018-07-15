@@ -32,7 +32,7 @@ export function fetchPlayers() {
   return dispatch => {
     console.log("22222");
     dispatch(fetchPlayersBegin());
-    return fetch("http://localhost:8000/Back%20memory/memory-back/web/app_dev.php/")
+    return fetch("http://127.0.0.1:8000/Back%20memory/memory-back/web/app_dev.php/")
       .then(handleErrors)
       .then(res => res.json())
       .then(json => {
